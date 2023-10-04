@@ -1,11 +1,13 @@
 # Recipe Blog - Using Node.js and MongoDB
 
-## Create .env file
-Create a .env file to store your MongoDB database credentials
+Make a copy of the `.env.sample` by running the following in your terminal:
 
 ```
-MONGODB_URI = mongodb+srv://<username>:<password>@cluster0.6m5cz.mongodb.net/Recipes?retryWrites=true&w=majority
+cp .env.sample .env
 ```
+
+Once done update the `.env` file with the updated values from the credentials file provided.
+
 
 ## Installation
 To run this project, install it locally using npm:
