@@ -1,27 +1,6 @@
 const express=require('express');
 const router=express.Router()
-const recipeController=require('../controllers/recipeController')
-// const multer=require('multer')
-
-// // define storage for the images
-// const storage=multer.diskStorage({
-//     // destination for files
-//     destination:function(req,file,callback){
-//         callback(null, './public/uploads')
-//     },
-//     // add back the extension
-//     filename:function(req,file,callback){
-//         callback(null,file.originalname)
-//     }
-// })
-
-// // upload paramters for multer
-// const upload = multer({
-//     storage:storage,
-//     limits: {
-//         fileSize: 1024 * 1024 * 3,
-//       },
-// })
+const recipeController=require('../controllers/recipeController');
 
 router.get('/',recipeController.homepage)
 router.post('/newCategory',recipeController.addCategory)
