@@ -4,7 +4,7 @@
   "description": "Recipe Blog using Node.js and MongoDB",
   "main": "index.js",
   "engines": {
-     "node": "18.x"
+    "node": "18.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,7 +25,8 @@
     "mongodb": "^6.1.0",
     "mongoose": "^7.5.3",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "redis": "^4.6.10"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
