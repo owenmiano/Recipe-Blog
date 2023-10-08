@@ -4,7 +4,6 @@ const fileUpload = require('express-fileupload');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
-const morgan =require('morgan')
 const routes=require('./server/routes/recipeRoutes')
 require('dotenv').config()
 const app=express();
@@ -33,9 +32,6 @@ app.set('view engine','ejs')
 // Api
 app.use('/',routes)
 
-if(process.env.NODE_ENV ==='development'){
-    app.use(morgan('dev'))
-}
 
 // Connect To MongoDB
 connectDB();
