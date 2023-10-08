@@ -2,13 +2,16 @@ const express=require('express');
 const expressLayouts=require('express-ejs-layouts');
 const fileUpload = require('express-fileupload');
 const session = require('express-session');
-const redis = require('redis');
 const RedisStore = require('connect-redis')(session);
+const redis = require('redis');
 const flash = require('connect-flash');
 const routes=require('./server/routes/recipeRoutes')
 require('dotenv').config()
 const app=express();
-const redisClient = redis.createClient();
+const redisClient = redis.createClient({
+    host: 'localhost', // Redis server hostname
+    port: 6379,
+});
 const port=process.env.PORT || 3310;
 const mongoose= require('mongoose');
 const connectDB=require('./server/db');
