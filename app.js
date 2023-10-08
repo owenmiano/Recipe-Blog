@@ -20,9 +20,9 @@ app.use(expressLayouts)
 app.use(cookieParser('CookingBlogSecure'));
 app.use(session({
     secret: 'CookingBlogSecretSession',
-    saveUninitialized: true,
-    resave: true
-  }));
+    resave: false,
+  saveUninitialized: false,
+}));
   app.use(flash());
   app.use(fileUpload());
 
@@ -38,6 +38,6 @@ connectDB();
 // Test database connection
 mongoose.connection.once('open',()=>{
     console.log("Connected successfully to MongoDB")
-    app.listen(port, console.log(`Server is running in ${process.env.NODE_ENV} mode on port:${port}`))
+    app.listen(port, console.log(`Server is running on port:${port}`))
 
 })

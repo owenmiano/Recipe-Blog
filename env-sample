@@ -1,3 +1,4 @@
 PORT=1000
-NODE_ENV=development
-DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.6m5cz.mongodb.net/Recipes?retryWrites=true&w=majority
+DB_User=username
+DB_Password=password
+DB_Name=databaseName
