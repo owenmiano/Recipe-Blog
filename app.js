@@ -33,6 +33,7 @@ app.use(expressLayouts)
   app.use(fileUpload());
 
 app.set('layout','./layouts/main')
+app.set('views', __dirname + '/views');
 app.set('view engine','ejs')
 
 // Api
