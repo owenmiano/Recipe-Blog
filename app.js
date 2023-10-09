@@ -23,8 +23,7 @@ app.use(
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-// Serve static files from the "public" directory
-app.use('/public', express.static('public'));
+app.use(express.static('public'))
 app.use(expressLayouts)
 
 
