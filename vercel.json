@@ -10,6 +10,13 @@
       {
         "src": "/(.*)",
         "dest": "app.js"
+      },
+      {
+        "handle": "filesystem"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "/public/$1"
       }
     ]
   }
