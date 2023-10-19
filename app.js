@@ -8,10 +8,11 @@ const routes=require('./server/routes/recipeRoutes')
 require('dotenv').config()
 const app=express();
 //load assets
-app.use('/styles', express.static(path.resolve(__dirname, "public/styles")));
-app.use('/img', express.static(path.resolve(__dirname, "public/img")));
-app.use('/js', express.static(path.resolve(__dirname, "public/js")));
-app.use('/uploads', express.static(path.resolve(__dirname, "public/uploads")));
+app.use('/styles', express.static(("/public/styles")));
+app.use('/img', express.static(("/public/img")));
+app.use('/js', express.static(("/public/js")));
+app.use('/uploads', express.static(("/public/uploads")));
+
 const port=process.env.PORT || 3310;
 const mongoose= require('mongoose');
 const connectDB=require('./server/db');
@@ -27,6 +28,7 @@ app.use(
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+
 app.use(expressLayouts)
 
 
@@ -39,7 +41,6 @@ app.set('view engine','ejs')
 
 // Api
 app.use('/',routes)
-
 
 
 // Connect To MongoDB
