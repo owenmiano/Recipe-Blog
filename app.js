@@ -8,10 +8,10 @@ const routes=require('./server/routes/recipeRoutes')
 require('dotenv').config()
 const app=express();
 //load assets
-app.use('/styles', express.static(("/public/styles")));
-app.use('/img', express.static(("/public/img")));
-app.use('/js', express.static(("/public/js")));
-app.use('/uploads', express.static(("/public/uploads")));
+app.use('/styles', express.static(("public/styles")));
+app.use('/img', express.static(("public/img")));
+app.use('/js', express.static(("public/js")));
+app.use('/uploads', express.static(("public/uploads")));
 
 const port=process.env.PORT || 3310;
 const mongoose= require('mongoose');
