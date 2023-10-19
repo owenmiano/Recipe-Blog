@@ -23,7 +23,6 @@ app.use(
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(express.static('/public'))
 app.use(expressLayouts)
 
 
@@ -37,6 +36,11 @@ app.set('view engine','ejs')
 // Api
 app.use('/',routes)
 
+//load assets
+app.use('/styles', express.static(path.resolve(__dirname, "public/styles")));
+app.use('/img', express.static(path.resolve(__dirname, "public/img")));
+app.use('/js', express.static(path.resolve(__dirname, "public/js")));
+app.use('/uploads', express.static(path.resolve(__dirname, "public/uploads")));
 
 // Connect To MongoDB
 connectDB();
